@@ -85,6 +85,7 @@ Install the **dbus-user-session** and **fuse-overlayfs** packages.
 Follow the normal Docker installation 
 
 Then install the **docker-ce-rootless-extras** package via your distribution's package manager.
+
 Then install it via **dockerd-rootless-setuptool.sh install**
 Finally, there will be two things written: **export=xxx**
 Copy and paste them into the last .bashrc file or if you are using ZSH, the .zshrc  file . 
