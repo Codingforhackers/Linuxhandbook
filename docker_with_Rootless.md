@@ -1,3 +1,5 @@
+## Introduction 
+
 When you install Docker, it will need full permissions on the system (root), and this causes a security problem because containers and the (daemon) Docker service will work as root.
 
 If it is hacked, the hacker will have full access to the system, and there is no real isolation of the containers.
