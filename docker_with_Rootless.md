@@ -69,10 +69,10 @@ testuser:231072:65536
 What do these numbers mean?
 
 The numbers after the username mean this : 
+  
+  - The first number is the first id allowed to use.
 
-The first number is the first id allowed to use.
-
-Numbers after **:** How many id do you have.
+  - Numbers after **:** How many id do you have.
 
 For example, it starts with 231072, id 0 means 231072 and id 1000 means 241072.
 
