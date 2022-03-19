@@ -46,6 +46,7 @@ Prerequisites :
 
 Ensure that the **newuidmap** **newgidmap** packages are installed and that there are 65,536 child ids.
 
+**newuidmap** verifies that the caller is the owner of the process indicated by **pid**.
 ```
 id -u
 1001
@@ -78,11 +79,67 @@ For example, it starts with 231072, id 0 means 231072 and id 1000 means 241072.
 
 Install the **dbus-user-session** and **fuse-overlayfs** packages.
 
+For Debian :
+Install **dbus-user-session**
+
+```bash
+sudo apt-get install -y dbus-user-session
+```
+Install **fuse-overlayfs**
+
+```bash
+sudo apt-get install -y fuse-overlayfs
+```
+
+Arch Linux / CentOS 8 /RHEL 8 : 
+
+Installing **fuse-overlayfs**
+
+```bash
+sudo pacman -S fuse-overlayfs
+```
+
 > It is recommended to use Kernel 5.11 or later
 
 ## install docker rootless
 
 Follow the normal Docker installation 
+
+Let's take Ubuntu as an example.
+
+**Install Docker Engine on Ubuntu**
+
+To get started with Docker Engine on Ubuntu, make sure you meet the prerequisites, then install Docker.
+
+Your Ubuntu version should be 64-bit and at least 18.04 (LTS).
+To get information about your distro version, run :
+```bash
+lsb_release -a 
+```
+In my case 
+
+
+![sysinfo](https://github.com/Codingforhackers/Linuxhandbook/blob/main/sysinfo.png)
+
+
+To uninstall old versions run :
+
+```bash
+ sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+Install Docker Engine : 
+
+
+```bash
+ sudo apt-get update
+ sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+Verify that Docker Engine is installed correctly by running the **hello-world** image.
+
+
+```bash
+sudo docker run hello-world
+```
 
 Then install the **docker-ce-rootless-extras** package via your distribution's package manager.
 
